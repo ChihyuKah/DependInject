@@ -5,9 +5,9 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\DashSpaceRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\LoggerRepository")
  */
-class DashSpace implements transform
+class Logger
 {
     /**
      * @ORM\Id()
@@ -19,11 +19,5 @@ class DashSpace implements transform
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function transform(string $input) : string
-    {
-        str_replace( " ",'-',$input);
-        // TODO: Implement transform() method.
     }
 }

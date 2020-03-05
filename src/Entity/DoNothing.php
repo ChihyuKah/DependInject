@@ -5,9 +5,9 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\CapitalizeRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\DoNothingRepository")
  */
-class Capitalize implements transform
+class DoNothing implements transform
 {
     /**
      * @ORM\Id()
@@ -23,9 +23,6 @@ class Capitalize implements transform
 
     public function transform(string $input)
     {
-        return preg_replace_callback('/(\w)(.)/',function ($m){
-            return strtoupper($m[1]).$m[2];
-        }, $input);
         // TODO: Implement transform() method.
     }
 }

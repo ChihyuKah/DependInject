@@ -10,7 +10,15 @@
 
 <div class="example-wrapper">
     <h1>Hello {{ controller_name }}! ✅</h1>
-
+    <form method="post">
+        <label for="fname">Put in a text</label><br>
+        <input type="text" id="input" name="inputField" ><br>
+        <input type="submit" value="Submit">
+        <select name="dropdown">
+            <option value="capitaliser">Capitalize</option>
+            <option value="dasher">Dash Space</option>
+        </select>
+    </form>
     This friendly message is coming from:
     <ul>
         <li>Your controller at <code><a href="{{ '/var/www/DI/src/Controller/HomepageController.php'|file_link(0) }}">src/Controller/HomepageController.php</a></code></li>
